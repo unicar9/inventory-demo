@@ -1,0 +1,8 @@
+export const FETCH_USER = 'fetch_user'
+export const ADD_MALL = 'add_mall'
+export const FETCH_MALL = 'fetch_mall'
+export const UPDATE_MALL = 'update_mall'
+export const DELETE_MALL = 'delete_mall'
+export const FETCH_MALLS = 'fetch_malls'
+export const ADD_ASSET = 'add_asset'
+export const FETCH_ASSETS = 'fetch_assets'

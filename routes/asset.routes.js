@@ -5,6 +5,9 @@ router.route('/api/assets')
     .get(assetController.findAll)
     .post(assetController.create)
 
+router.route('/api/assets/search')
+    .post(assetController.searchAssets)
+    
 router.route('/api/assets/:assetId')
     .get(assetController.findOne)
     .put(assetController.update)

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { Link } from 'react-router-dom'
 import { Button, Menu } from 'semantic-ui-react'
 
 class Header extends Component {

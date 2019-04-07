@@ -8,7 +8,7 @@ const MallDashboard = () => {
 			<Segment clearing>
 				<Header as='h2' content="List of Malls" floated="left" />
 				<Header floated="right">
-					<Button as="a" href="/malls/new" primary content="Add Mall" icon="add" />
+					<Button as="a" href="/malls/new/form" primary content="Add Mall" icon="add" />
 				</Header>
 			</Segment>
 		

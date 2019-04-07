@@ -7,7 +7,8 @@ import {
     FETCH_MALLS, 
     ADD_ASSET, 
     FETCH_ASSETS, 
-    UPDATE_MALL 
+    UPDATE_MALL,
+    SEARCH_ASSETS 
 } from './types'
 
 export const fetchUser = () => async dispatch => {
@@ -56,3 +57,11 @@ export const fetchAssets = () => async dispatch => {
 
     dispatch({ type: FETCH_ASSETS, payload: res.data })
 }
+
+export const searchAssets = (queryData) => async dispatch => {
+    const res = await axios.post('/api/assets/search', queryData)
+
+    dispatch({ type: SEARCH_ASSETS, payload: res.data })
+}
+
+

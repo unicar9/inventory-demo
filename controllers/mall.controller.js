@@ -27,7 +27,7 @@ exports.findOne = async (req, res) => {
 
     try {
         const mall = await Mall.findById(mallId)
-        const assets = await Asset.find({ mall: mallId})
+        const assets = await Asset.find({ mall: mallId}).populate('mall', 'name')
         
         const data = {
             ...mall._doc,
@@ -94,7 +94,7 @@ exports.delete = async (req, res) => {
                 message: `Shopping center not found with id ${mallId}`
             })
         }
-        res.send({ message: "Shopping center deleted successfully!" , mallId: mallId})
+        res.send({ message: "Shopping center deleted successfully!", mallId: mallId })
     } catch (err) {
         if (err.kind === 'ObjectId' || err.name === 'NotFound') {
             return res.status(404).send({

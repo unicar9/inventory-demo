@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Card, Label, Loader, Icon } from 'semantic-ui-react'
 
 class AssetList extends Component {
-    
+
     renderAssets() {
         const assets = this.props.assets
 
@@ -17,8 +17,17 @@ class AssetList extends Component {
                                 </Label>
                                 <Card.Header>{asset.name}</Card.Header>
                                 <Card.Meta>{new Date(asset.createdAt).toDateString() || 'No Created Time'}</Card.Meta>
-                                <Card.Description><Icon name="map marker alternate" />{asset.location || "No Location Yet"}</Card.Description>
-                                <Card.Description>{asset.dimension || "No Dimension Yet"}</Card.Description>
+                                <Card.Description>
+                                    <Icon name="map marker alternate" />{asset.location || "No Location Yet"}
+                                </Card.Description>
+                                <Card.Description>
+                                    <Icon name="tablet" />
+                                    {asset.dimension || "No Dimension Yet"}
+                                </Card.Description>
+                            </Card.Content>
+                            <Card.Content extra>
+                                <Icon name="building" />
+                                {asset.mall? asset.mall.name : "Not in a mall"}
                             </Card.Content>
                         </Card>
                     )

@@ -15,8 +15,8 @@ class MallList extends Component {
             <Card.Group itemsPerRow={3}>
                 {!malls ? <Loader active inline='centered' /> : this.props.malls.map(mall => {
                     return (
-                            <Card key={mall._id} href={`/malls/${mall._id}`}>
-                                <Card.Content>
+                            <Card key={mall._id} link>
+                                <Card.Content href={`/malls/${mall._id}`}>
                                     <Card.Header>{mall.name}</Card.Header>
                                     <Card.Meta>{new Date(mall.createdAt).toDateString() || 'no'}</Card.Meta>
                                     <Card.Description>{mall.address}</Card.Description>

@@ -12,6 +12,11 @@ After reading through the requirements, what immediately came to my mind was bui
 
 * Integrated Google OAuth using Passport strategy for Google OAuth 2.0, and `cookie-session` for keeping track of login information. So no fuss about hashing passwords and setting up an admin user. I also tried JWT token-based authentication during the process but finally settled for OAuth due to its convenience.
 
+## Screenshots
+ 
+ ![List of assets under one mall](https://github.com/unicar9/inventory-demo/blob/master/screenshots/1.png)
+ ![List of assets](https://github.com/unicar9/inventory-demo/blob/master/screenshots/2.png)
+ ![List of malls](https://github.com/unicar9/inventory-demo/blob/master/screenshots/3.png)
 
 ## Installation and Run on Local Machine
 

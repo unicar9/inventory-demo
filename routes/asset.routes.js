@@ -1,5 +1,8 @@
 const router = require('express').Router()
 const assetController = require('../controllers/asset.controller')
+const requireLogin = require('../middlewares/requireLogin')
+
+router.use('/api/assets', requireLogin)
 
 router.route('/api/assets')
     .get(assetController.findAll)
@@ -7,7 +10,7 @@ router.route('/api/assets')
 
 router.route('/api/assets/search')
     .post(assetController.searchAssets)
-    
+
 router.route('/api/assets/:assetId')
     .get(assetController.findOne)
     .put(assetController.update)

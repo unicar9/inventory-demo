@@ -14,13 +14,13 @@ class MallDetail extends Component {
     }
 
     render() {
-        const assets = this.props.mall.assets
+        const { assets } = this.props.mall
         return (
             <div>
                 <Segment clearing>
                     <Header as='h2' content={this.props.mall.name} subheader={this.props.mall.address} floated="left" />
                     <Header floated="right">
-                        <Button as="a" href={`/malls/${this.props.match.params.id}/assets/new`} primary content="Add Asset" icon="add" />
+                        <Button as="a" href={`/malls/${this.props.match.params.id}/assets/new/form`} primary content="Add Asset" icon="add" />
                     </Header>
                 </Segment>
                 

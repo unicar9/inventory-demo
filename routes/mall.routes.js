@@ -1,5 +1,8 @@
 const router = require('express').Router()
 const mallController = require('../controllers/mall.controller')
+const requireLogin = require('../middlewares/requireLogin')
+
+router.use('/api/malls', requireLogin)
 
 router.route('/api/malls')
     .get(mallController.findAll)

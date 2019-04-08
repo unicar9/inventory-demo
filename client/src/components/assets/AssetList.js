@@ -4,11 +4,11 @@ import { Card, Label, Loader, Icon } from 'semantic-ui-react'
 class AssetList extends Component {
 
     renderAssets() {
-        const assets = this.props.assets
+        const { assets } = this.props
 
         return (
             <Card.Group itemsPerRow={5}>
-                {!assets ? <Loader active inline='centered' /> : assets.reverse().map(asset => {
+                {(!(assets || []).length) ? <Loader active inline='centered' /> : assets.reverse().map(asset => {
                     return (
                         <Card key={asset._id} color={asset.status? 'green' : 'red'}>
                             <Card.Content>

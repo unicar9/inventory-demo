@@ -10,10 +10,10 @@ class MallList extends Component {
     }
 
     renderMalls() {
-        const malls = this.props.malls
+        const { malls } = this.props
         return (
             <Card.Group itemsPerRow={3}>
-                {!malls ? <Loader active inline='centered' /> : this.props.malls.map(mall => {
+                {!malls.length ? <Loader active inline='centered' /> : malls.map(mall => {
                     return (
                             <Card key={mall._id} link>
                                 <Card.Content href={`/malls/${mall._id}`}>

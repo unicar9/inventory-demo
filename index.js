@@ -39,7 +39,7 @@ app.use(assetRoutes)
 app.use(mallRoutes)
 
 app.get('/api', (req, res) => {
-    res.send('Welcome to inventory management api')
+    res.send('Welcome to inventory management API, please go to /auth/google for user authentication')
 })
 
 // handler for 404 - Resource Not Found

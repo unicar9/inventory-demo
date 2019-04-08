@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 const keys = require('../config/index')
 const MockStrategy = require('passport-mock-strategy')
 
-
 const User = mongoose.model('User')
 
 passport.serializeUser((user, done) => {
@@ -20,10 +19,11 @@ passport.deserializeUser((id, done) => {
 
 
 if (process.env.NODE_ENV === 'test') {
-    passport.use(new MockStrategy({}, (user, done) => {
+    passport.use(new MockStrategy({}, async (user, done) => {
         // Perform actions on user, call done once finished
-        user = {googleId: "000000000", email:"fakeemail@fa.ke"}
-        done(null, user)
+        // user = {googleId: "000000000", email:"fakeemail@fa.ke"}
+        let fakeUser = await new User({ googleId: "000000000", email:"fakeemail@fa.ke" }).save()
+        done(null, fakeUser)
     }))
 
 } else {

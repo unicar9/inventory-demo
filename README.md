@@ -6,16 +6,50 @@ After reading through the requirements, what immediately came to my mind was bui
 
 ## Overview
 
-* 
+* Used [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) to persist all development and test data in the demo. The database has 3 models/collections, namely, Mall(Shopping Center), Asset and User. Malls and assets are in one-to-many relationship: each mall can have zero to many assets, and each asset can only belong to one mall. Below is an ERD diagram demonstrating all the properties in each model and their relationship.
+  
+  ![inventory-demo-erd](https://i.imgur.com/5B3gVGO.png)
+
+* Integrated Google OAuth using Passport strategy for Google OAuth 2.0, and `cookie-session` for keeping track of login information. So no fuss about hasing passwords and setting up an admin user. I also tried JWT token-based authentication during the process but finally settled for OAuth due to its convenience.
+
 
 ## Installation and Run on Local Machine
 
+```sh
+# clone it
+git clone https://github.com/unicar9/inventory-demo.git
+cd inventory-demo
 
+# Install dependencies for back-end
+npm install
+
+# Run integration tests for back-end
+# from the root directory 
+npm run test
+
+# Start back-end dev server and test the API on http://localhost:5000/api
+# from root directory
+npm run server
+
+# Install dependencies for front-end
+# go to client folder
+cd client && npm install
+
+# Start both back-end and front-end dev server and test the app on http://localhost:3000
+# from root directory
+cd ..
+npm run dev
+
+```
 
 ## Back-end Usage(API Endpoints)
 
 HTTP Requests | URL | Method | 
 ------------- | --- | ------ | 
+Initial entry point | /api | `GET` 
+Google authentication | /auth/google | `GET` 
+Logout | /api/logout | `GET` 
+Check current user | api/current_user | `GET` 
 Get all malls | /api/malls |  `GET`  
 Create one mall | /api/malls |  `POST`  
 Get one mall by id | /api/malls/:mallId |  `GET` 
@@ -41,7 +75,7 @@ Create one mall
 
 * **Sample Request Body for `POST` to `/api/assets`**
 
-Create one assets
+Create one asset
 
 ```javascript
 {

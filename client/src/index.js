@@ -11,10 +11,6 @@ import App from './components/App'
 import reducers from './reducers'
 import * as serviceWorker from './serviceWorker'
 
-// const rootReducer = combineReducers({
-//     form: formReducer
-// })
-
 // Development only axios helpers
 import axios from 'axios'
 window.axios = axios

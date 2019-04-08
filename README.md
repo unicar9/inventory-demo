@@ -6,11 +6,11 @@ After reading through the requirements, what immediately came to my mind was bui
 
 ## Overview
 
-* Used [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) to persist all development and test data in the demo. The database has 3 models/collections, namely, Mall(Shopping Center), Asset and User. Malls and assets are in one-to-many relationship: each mall can have zero to many assets, and each asset can only belong to one mall. Below is an ERD diagram demonstrating all the properties in each model and their relationship.
+* Used [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cloud service to persist all development and test data in the demo. The database has 3 models/collections, namely, Mall(Shopping Center), Asset and User. Malls and assets are in one-to-many relationship: each mall can have zero to many assets, and each asset can only belong to one mall. Below is an ERD diagram demonstrating all the properties in each model and their relationship.
   
   ![inventory-demo-erd](https://i.imgur.com/5B3gVGO.png)
 
-* Integrated Google OAuth using Passport strategy for Google OAuth 2.0, and `cookie-session` for keeping track of login information. So no fuss about hasing passwords and setting up an admin user. I also tried JWT token-based authentication during the process but finally settled for OAuth due to its convenience.
+* Integrated Google OAuth using Passport strategy for Google OAuth 2.0, and `cookie-session` for keeping track of login information. So no fuss about hashing passwords and setting up an admin user. I also tried JWT token-based authentication during the process but finally settled for OAuth due to its convenience.
 
 
 ## Installation and Run on Local Machine

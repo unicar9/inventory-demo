@@ -18,7 +18,7 @@ After reading through the requirements, what immediately came to my mind was bui
 
  ![List of assets](https://github.com/unicar9/inventory-demo/blob/master/screenshots/2.png)
 
-* Listing all malls, you can edit and delete each mall by clicking the button, and you can enter the detail page by cliding the mall card itself.
+* Listing all malls, you can edit and delete each mall by clicking the button, and you can enter the detail page by clicking the mall card itself.
   
  ![List of malls](https://github.com/unicar9/inventory-demo/blob/master/screenshots/3.png)
 

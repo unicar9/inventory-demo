@@ -54,6 +54,7 @@ cd ..
 npm run dev
 
 ```
+**Please make sure your localhost port 3000, 4000, 5000 are not in use.**
 
 ## Back-end Usage(API Endpoints)
 

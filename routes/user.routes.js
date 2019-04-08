@@ -12,13 +12,23 @@ module.exports = (app) => {
         '/auth/google/callback', 
         passport.authenticate('google'), 
         (req, res) => {
-            res.redirect('/malls')
+            if (req.headers.host === 'localhost:3000') {
+                res.redirect('/malls')
+            } else {
+                res.redirect('/api/malls')
+            }
+            
         }
     )
 
     app.get('/api/logout', (req, res) => {
         req.logout()
-        res.redirect('/')
+        if (req.headers.host === 'localhost:3000') {
+            res.redirect('/')
+        } else {
+            res.redirect('/api/')
+        }
+       
     })
 
     app.get('/api/current_user', (req, res) => {

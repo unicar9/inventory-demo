@@ -27,7 +27,7 @@
     "mocha": "^6.2.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1",
-    "passport-mock-strategy": "^1.1.1",
+    "passport-mock-strategy": "^2.0.0",
     "supertest": "^4.0.2"
   }
 }

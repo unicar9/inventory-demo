@@ -24,7 +24,7 @@
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "concurrently": "^4.1.2",
-    "mocha": "^6.2.0",
+    "mocha": "^8.2.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.2",
     "passport-mock-strategy": "^2.0.0",
